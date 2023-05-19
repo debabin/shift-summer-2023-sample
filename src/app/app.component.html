@@ -1,0 +1,12 @@
+<div *ngIf="!isLoading">
+  <h1>{{ title }}</h1>
+
+  <div class="pokemons_container">
+    <div class="pokemon" *ngFor="let pokemon of pokemons">
+      <img src="{{ pokemon.image }}" alt="character" />
+      <div>{{ pokemon.name }}</div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isLoading">Loading...</div>
